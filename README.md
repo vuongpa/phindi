@@ -1,4 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Phindi - Modern Communication Platform
+
+A beautiful, modern communication platform built with Next.js, featuring chat, voice, and video calling capabilities with a comprehensive dark/light theme system.
+
+## Features
+
+- 💬 **Real-time Chat**: Modern chat interface with message reactions and context menus
+- 📞 **Voice & Video Calls**: Integrated calling system with call notifications
+- 🎨 **Advanced Theming**: Comprehensive light/dark theme system with smooth transitions
+- 📱 **Responsive Design**: Mobile-first design that works on all devices
+- ⚙️ **Customizable Settings**: Extensive settings panel for personalization
+- 🔒 **Privacy Controls**: Granular privacy and notification settings
+
+## Theme System
+
+Phindi features a sophisticated theme system with:
+
+- **Light Theme**: Clean, minimal design with subtle grays and high contrast
+- **Dark Theme**: Modern dark interface with warm undertones for comfortable viewing
+- **System Theme**: Automatically follows your OS preference
+- **Smooth Transitions**: Seamless switching between themes
+- **Consistent Colors**: Semantic color tokens ensure consistency across all components
+
+### Theme Usage
+
+```tsx
+import { ThemeToggle } from "@/components/theme-toggle"
+
+// Icon variant for compact spaces
+<ThemeToggle variant="icon" size="sm" />
+
+// Full variant for settings pages
+<ThemeToggle variant="full" />
+```
+
+For more details, see [THEME_SYSTEM.md](./THEME_SYSTEM.md).
 
 ## Getting Started
 
@@ -16,9 +51,30 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  page.tsx           # Main chat interface
+  settings/          # Settings and preferences
+  contacts/          # Contact management
+  profile/           # User profile
+components/
+  theme-provider.tsx # Theme context and logic
+  theme-toggle.tsx   # Theme switching component
+  theme-preview.tsx  # Theme preview component
+  app-sidebar.tsx    # Application sidebar
+  ui/               # Reusable UI components
+```
+
+## Technologies Used
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Radix UI** - Headless UI components
+- **Lucide React** - Beautiful icons
+- **Framer Motion** - Smooth animations
 
 ## Learn More
 
